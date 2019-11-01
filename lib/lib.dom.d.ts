@@ -1550,7 +1550,7 @@ interface RequestInit {
     /**
      * A string to set request's method.
      */
-    method?: string;
+    method?: RequestMethod;
     /**
      * A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode.
      */
@@ -6866,7 +6866,7 @@ interface HTMLFormElement extends HTMLElement {
     /**
      * Sets or retrieves how to send the form data to the server.
      */
-    method: string;
+    method: RequestMethod;
     /**
      * Sets or retrieves the name of the object.
      */
@@ -12780,7 +12780,7 @@ interface Request extends Body {
     /**
      * Returns request's HTTP method, which is "GET" by default.
      */
-    readonly method: string;
+    readonly method: RequestMethod;
     /**
      * Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs.
      */
@@ -20137,6 +20137,7 @@ type ReferrerPolicy = "" | "no-referrer" | "no-referrer-when-downgrade" | "same-
 type RequestCache = "default" | "no-store" | "reload" | "no-cache" | "force-cache" | "only-if-cached";
 type RequestCredentials = "omit" | "same-origin" | "include";
 type RequestDestination = "" | "audio" | "audioworklet" | "document" | "embed" | "font" | "image" | "manifest" | "object" | "paintworklet" | "report" | "script" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt";
+type RequestMethod = "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "CONNECT" | "OPTIONS" | "TRACE" | "PATCH";
 type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
 type RequestRedirect = "follow" | "error" | "manual";
 type ResponseType = "basic" | "cors" | "default" | "error" | "opaque" | "opaqueredirect";
